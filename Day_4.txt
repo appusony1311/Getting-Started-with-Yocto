@@ -1,0 +1,12 @@
+
+
+1. All steps:
+https://www.howtoforge.com/tutorial/how-to-create-your-own-linux-distribution-with-yocto-on-ubuntu/
+
+2.https://www.ibm.com/developerworks/library/l-yocto-linux/index.html
+
+3.https://github.com/Nuand/bladeRF/wiki/Creating-Linux-based-Embedded-System-Images-with-Yocto
+
+4.http://variwiki.com/index.php?title=Yocto_Hello_World
+
+5.https://www.yoctoproject.org/docs/2.5/bsp-guide/bsp-guide.html#bsp-machine-configuration-example

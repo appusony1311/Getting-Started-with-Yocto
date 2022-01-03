@@ -1,0 +1,239 @@
+
+1
+
+https://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html
+
+	SUMMARY =
+	SUMMARY -  A short summary for the recipe, which is 72 characters or less.
+
+	DESCRIPTION -     A long description for the recipe. 
+
+	HOMEPAGE - Website where more information about the software the recipe is building can be found.
+
+	SECTION -  The section in which packages should be categorized.
+
+	SECTION = "bootloaders"
+	SECTION = "kernel"
+	SECTION = "base"
+	SECTION = "libs"
+	SECTION = "devel"
+	
+	ex:
+	SUMMARY = "Utilities and libraries for producing multi-lingual messages"
+	DESCRIPTION = "GNU gettext is a set of tools that provides a framework to help other programs produce multi-lingual messages. \
+	These tools include a set of conventions about how programs should be written to support message catalogs, a directory and file \
+	naming organization for the message catalogs themselves, a runtime library supporting the retrieval of translated messages, and \
+	a few stand-alone programs to massage in various ways the sets of translatable and already translated strings."
+
+	HOMEPAGE = "http://www.gnu.org/software/gettext/gettext.html"
+
+	PROVIDES-
+
+    	A list of aliases by which a particular recipe can be known. By default, a recipe's own PN is implicitly already in its PROVIDES list. 		If a recipe uses PROVIDES, the additional aliases are synonyms for the recipe and can be useful satisfying dependencies of other 	recipes during the build as specified by DEPENDS.
+
+    	Consider the following example PROVIDES statement from a recipe file libav_0.8.11.bb:
+
+         PROVIDES += "libpostproc"
+                        
+
+    	The PROVIDES statement results in the "libav" recipe also being known as "libpostproc". 
+
+	ex:
+	meta/recipes-bsp/u-boot/u-boot.inc
+	PROVIDES = "virtual/bootloader"
+
+	PROVIDES += "virtual/kernel"
+
+
+	LICENSE -     The list of source licenses for the recipe. 
+	LICENSE = "GPLv2"
+	LICENSE = "MIT"
+	LICENSE = "GPLv2 | BSD"
+
+
+	SRC_URI-
+
+    	The list of source files - local or remote. This variable tells BitBake which bits to pull for the build and how to pull them. For 		example, if the recipe or append file needs to fetch a single tarball from the Internet, the recipe or append file uses a SRC_URI 		entry 	that specifies that tarball. On the other hand, if the recipe or append file needs to fetch a tarball and include a custom 		file, the recipe 	or append file needs an SRC_URI variable that specifies all those sources.
+
+    	The following list explains the available URI protocols:
+
+        file:// - Fetches files, which are usually files shipped with the metadata, from the local machine. The path is relative to the 	FILESPATH variable.
+
+        bzr:// - Fetches files from a Bazaar revision control repository.
+
+        git:// - Fetches files from a Git revision control repository.
+
+        osc:// - Fetches files from an OSC (OpenSUSE Build service) revision control repository.
+
+        repo:// - Fetches files from a repo (Git) repository.
+
+        http:// - Fetches files from the Internet using HTTP.
+
+        https:// - Fetches files from the Internet using HTTPS.
+
+        ftp:// - Fetches files from the Internet using FTP.
+
+        cvs:// - Fetches files from a CVS revision control repository.
+
+        hg:// - Fetches files from a Mercurial (hg) revision control repository.
+
+        p4:// - Fetches files from a Perforce (p4) revision control repository.
+
+        ssh:// - Fetches files from a secure shell.
+
+        svn:// - Fetches files from a Subversion (svn) revision control repository.
+
+        Here are some additional options worth mentioning:
+
+        unpack - Controls whether or not to unpack the file if it is an archive. The default action is to unpack the file.
+
+        subdir - Places the file (or extracts its contents) into the specified subdirectory. This option is useful for unusual tarballs or 		other archives that do not have their files already in a subdirectory within the archive.
+
+        name - Specifies a name to be used for association with SRC_URI checksums when you have more than one file specified in SRC_URI.
+
+        downloadfilename - Specifies the filename used when storing the downloaded file.
+
+	./linux-yocto-rt_4.12.bb:17:SRC_URI = "git://git.yoctoproject.org/linux-yocto-4.12.git;branch=${KBRANCH};name=machine \
+	./linux-yocto-tiny_4.15.bb:18:SRC_URI = "git://git.yoctoproject.org/linux-yocto.git;branch=${KBRANCH};name=machine \
+	./linux-yocto-rt_4.14.bb:17:SRC_URI = "git://git.yoctoproject.org/linux-yocto.git;branch=${KBRANCH};name=machine \
+	./linux-yocto-tiny_4.14.bb:20:SRC_URI = "git://git.yoctoproject.org/linux-yocto.git;branch=${KBRANCH};name=machine \
+	./linux-yocto_4.14.bb:24:SRC_URI = "git://git.yoctoproject.org/linux-yocto.git;name=machine;branch=${KBRANCH}; \
+	./linux-yocto-dev.bb:22:SRC_URI = "git://git.yoctoproject.org/linux-yocto-dev.git;branch=${KBRANCH};name=machine \
+	./linux-yocto_4.15.bb:24:SRC_URI = "git://git.yoctoproject.org/linux-yocto.git;name=machine;branch=${KBRANCH}; \
+	./linux-yocto-rt_4.15.bb:17:SRC_URI = "git://git.yoctoproject.org/linux-yocto.git;branch=${KBRANCH};name=machine \
+	./linux-yocto-tiny_4.12.bb:17:SRC_URI = "git://git.yoctoproject.org/linux-yocto-4.12.git;branch=${KBRANCH};name=machine \
+	./linux-yocto_4.12.bb:24:SRC_URI = "git://git.yoctoproject.org/linux-yocto-4.12.git;name=machine;branch=${KBRANCH}; \
+	./linux-dummy.bb:31:SRC_URI = "file://COPYING.GPL"
+
+	SRC_URI = "git://git.denx.de/u-boot.git \
+           file://CVE-2018-1000205-1.patch \
+           file://CVE-2018-1000205-2.patch \
+
+	"
+	SRCREV = "8c5d4fd0ec222701598a27b26ab7265d4cee45a3"
+
+	SRCREV-
+
+    	The revision of the source code used to build the package. This variable applies only when using Subversion, Git, Mercurial and 	Bazaar. If you want to build a fixed revision and you want to avoid performing a query on the remote repository every time BitBake 		parses your recipe, you should specify a SRCREV that is a full revision identifier and not just a tag. 
+
+	PV -   The version of the recipe. 
+
+	./linux-yocto-rt_4.12.bb:22:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto.inc:7:UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>\d+\.\d+(\.\d+)*)"
+	./linux-yocto-tiny_4.15.bb:16:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto-rt_4.14.bb:25:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto-tiny_4.14.bb:18:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto_4.14.bb:32:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto-dev.bb:35:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto_4.15.bb:32:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto-rt_4.15.bb:25:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto-tiny_4.12.bb:15:PV = "${LINUX_VERSION}+git${SRCPV}"
+	./linux-yocto_4.12.bb:31:PV = "${LINUX_VERSION}+git${SRCPV}"
+
+
+
+2.
+
+	https://www.openembedded.org/wiki/Recipe_License_Fields
+
+	LIC_FILES_CHKSUM
+
+	If a LICENSE or COPYING file exists, use it along with the license text from one source (header file preferred), if there are 		inconsistencies (multiple versions, different licenses) report this information and then we can determine what the next steps should 		be to reconcile.
+
+	    How to specify the LIC_FILES_CHKSUM variable:
+
+	LIC_FILES_CHKSUM = “file://COPYING;md5=xxxx"
+
+
+3.
+
+    The bitake technicalities are:
+
+    If T DEPENDS on P then T's do_configure task is made to depend on P's do_populate_sysroot task.
+
+    If T RDEPENDS on P then T's do_build task ia made to depend on P's do_package_write task.
+
+
+4.
+	EXTRA_OECMAKE
+
+	    Additional cmake options.
+	EXTRA_OECONF
+
+	    Additional configure script options.
+	EXTRA_OEMAKE
+
+	    Additional GNU make options.
+
+5.
+	IMAGE_FSTYPES
+
+    	Specifies the formats the OpenEmbedded build system uses during the build when creating the root filesystem. For example, setting 	IMAGE_FSTYPES as follows causes the build system to create root filesystems using two formats: .ext3 and .tar.bz2:
+
+         IMAGE_FSTYPES = "ext3 tar.bz2"
+                        
+
+      For the complete list of supported image formats from which you can choose, see IMAGE_TYPES. 
+
+6.
+	IMAGE_INSTALL
+
+	    Specifies the packages to install into an image. The IMAGE_INSTALL variable is a mechanism for an image recipe and you should use it with care to avoid ordering issues.
+
+	    Image recipes set IMAGE_INSTALL to specify the packages to install into an image through image.bbclass. Additionally, "helper" classes exist, such as core-image.bbclass, that can take IMAGE_FEATURES lists and turn these into auto-generated entries in IMAGE_INSTALL in addition to its default contents. 
+
+
+7.
+	export base_bindir = "${base_prefix}/bin"
+	export base_sbindir = "${base_prefix}/sbin"
+	export base_libdir = "${base_prefix}/lib"
+
+	# Architecture independent paths
+	export datadir = "${prefix}/share"
+	export sysconfdir = "/etc"
+	export sharedstatedir = "${prefix}/com"
+	export localstatedir = "/var"
+	export infodir = "${datadir}/info"
+	export mandir = "${datadir}/man"
+	export docdir = "${datadir}/doc"
+	export servicedir = "/srv"
+
+	# Architecture dependent paths
+	export bindir = "${exec_prefix}/bin"
+	export sbindir = "${exec_prefix}/sbin"
+	export libexecdir = "${exec_prefix}/libexec"
+	export libdir = "${exec_prefix}/lib"
+	export includedir = "${exec_prefix}/include"
+	export oldincludedir = "${exec_prefix}/include"
+
+8. linux:KBRANCH,KMACHINE,SRCREV,COMPATIBLE_MACHINE,LINUX_VERSION,KBUILD_DEFCONFIG,KERNEL_DEVICETREE,KERNEL_IMAGETYPE 
+
+KBRANCH_genericx86  = "v4.15/standard/base"
+KBRANCH_genericx86-64  = "v4.15/standard/base"
+KBRANCH_edgerouter = "v4.15/standard/edgerouter"
+KBRANCH_beaglebone-yocto = "v4.15/standard/beaglebone"
+KBRANCH_mpc8315e-rdb = "v4.15/standard/fsl-mpc8315e-rdb"
+
+KMACHINE_genericx86 ?= "common-pc"
+KMACHINE_genericx86-64 ?= "common-pc-64"
+KMACHINE_beaglebone-yocto ?= "beaglebone"
+
+SRCREV_machine_genericx86    ?= "51273ff79f4ad930f4a788257f58e1266cb236e3"
+SRCREV_machine_genericx86-64 ?= "51273ff79f4ad930f4a788257f58e1266cb236e3"
+SRCREV_machine_edgerouter ?= "3373c0cf71f2812eeb9694839456df6f67fd32ac"
+SRCREV_machine_beaglebone-yocto ?= "e25dbfe95302eeaa1a03a828d05c09479574488a"
+SRCREV_machine_mpc8315e-rdb ?= "0b32edc46dfe7c40bf5451e9b7533c823bb2c6c4"
+
+COMPATIBLE_MACHINE_genericx86 = "genericx86"
+COMPATIBLE_MACHINE_genericx86-64 = "genericx86-64"
+COMPATIBLE_MACHINE_edgerouter = "edgerouter"
+COMPATIBLE_MACHINE_beaglebone-yocto = "beaglebone-yocto"
+COMPATIBLE_MACHINE_mpc8315e-rdb = "mpc8315e-rdb"
+
+LINUX_VERSION_genericx86 = "4.15.18"
+LINUX_VERSION_genericx86-64 = "4.15.18"
+LINUX_VERSION_edgerouter = "4.15.18"
+LINUX_VERSION_beaglebone-yocto = "4.15.18"
+LINUX_VERSION_mpc8315e-rdb = "4.15.18"
+
+

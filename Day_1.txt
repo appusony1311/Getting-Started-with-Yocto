@@ -1,0 +1,298 @@
+
+
+git://git.yoctoproject.org/poky
+
+find ./ -iname "machine"
+
+1. machine:
+
+ #ls -l meta-yocto-bsp/conf/machine/
+total 24
+-rw-rw-r-- 1 alex alex 1352 Aug 24 18:19 beaglebone-yocto.conf
+-rw-rw-r-- 1 alex alex  698 Aug 24 18:19 edgerouter.conf
+-rw-rw-r-- 1 alex alex  376 Aug 24 18:19 genericx86-64.conf
+-rw-rw-r-- 1 alex alex  384 Aug 24 18:19 genericx86.conf
+drwxrwxr-x 2 alex alex 4096 Aug 24 18:19 include
+-rw-rw-r-- 1 alex alex  823 Aug 24 18:19 mpc8315e-rdb.conf
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/poky$ 
+
+ #ls -l meta/conf/machine
+total 32
+drwxrwxr-x 8 alex alex 4096 Aug 24 18:19 include
+-rw-rw-r-- 1 alex alex 1093 Aug 24 18:19 qemuarm64.conf
+-rw-rw-r-- 1 alex alex  767 Aug 24 18:19 qemuarm.conf
+-rw-rw-r-- 1 alex alex  322 Aug 24 18:19 qemumips64.conf
+-rw-rw-r-- 1 alex alex  322 Aug 24 18:19 qemumips.conf
+-rw-rw-r-- 1 alex alex  712 Aug 24 18:19 qemuppc.conf
+-rw-rw-r-- 1 alex alex 1307 Aug 24 18:19 qemux86-64.conf
+-rw-rw-r-- 1 alex alex 1277 Aug 24 18:19 qemux86.conf
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/poky$ 
+
+2.images
+
+/meta/recipes-core/images/core-image-minimal.bb
+
+./meta/recipes-core/images
+./meta/recipes-core/images/core-image-minimal.bb
+./meta/recipes-core/images/core-image-base.bb
+./meta/recipes-core/images/build-appliance-image
+./meta/recipes-core/images/build-appliance-image_15.0.0.bb
+./meta/recipes-core/images/core-image-minimal-initramfs.bb
+./meta/recipes-core/images/core-image-minimal-dev.bb
+./meta/recipes-core/images/core-image-tiny-initramfs.bb
+./meta/recipes-core/images/core-image-minimal-mtdutils.bb
+
+
+.meta-selftest/recipes-test/images
+.meta-selftest/recipes-test/images/error-image.bb
+.meta-selftest/recipes-test/images/wic-image-minimal.wks
+.meta-selftest/recipes-test/images/wic-image-minimal.bb
+.meta-selftest/recipes-test/images/oe-selftest-image.bb
+.meta-selftest/recipes-test/images/test-empty-image.bb
+.meta-selftest/recipes-test/container-image
+.meta-selftest/recipes-test/container-image/container-test-image.bb
+.meta-selftest/recipes-test/container-image/container-image-testpkg.bb
+
+
+.meta-skeleton/recipes-multilib/images
+.meta-skeleton/recipes-multilib/images/core-image-multilib-example.bb
+
+3. layer.conf file
+
+./meta-poky/conf/layer.conf
+./meta-selftest/conf/layer.conf
+./meta-yocto-bsp/conf/layer.conf
+./meta/conf/layer.conf
+./meta-skeleton/conf/layer.conf
+
+4. u-boot:
+
+./meta/recipes-bsp/u-boot
+./meta/recipes-bsp/u-boot/u-boot-common_2018.07.inc
+./meta/recipes-bsp/u-boot/u-boot-mkimage_2018.07.bb
+./meta/recipes-bsp/u-boot/u-boot_2018.07.bb
+./meta/recipes-bsp/u-boot/u-boot-fw-utils_2018.07.bb
+./meta/recipes-bsp/u-boot/u-boot.inc
+
+5. linux kernel:
+
+./meta-yocto-bsp/recipes-kernel/linux/linux-yocto-dev.bbappend
+./meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.12.bbappend
+./meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.14.bbappend
+./meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.15.bbappend
+
+
+./meta/recipes-kernel/linux/linux-yocto-rt_4.12.bb
+./meta/recipes-kernel/linux/linux-yocto.inc
+./meta/recipes-kernel/linux/linux-yocto-tiny_4.15.bb
+./meta/recipes-kernel/linux/linux-yocto-rt_4.14.bb
+./meta/recipes-kernel/linux/linux-yocto-tiny_4.14.bb
+./meta/recipes-kernel/linux/linux-dummy
+./meta/recipes-kernel/linux/linux-yocto_4.14.bb
+./meta/recipes-kernel/linux/linux-yocto_4.15.bb
+./meta/recipes-kernel/linux/linux-yocto-dev.bb
+./meta/recipes-kernel/linux/linux-yocto-rt_4.15.bb
+./meta/recipes-kernel/linux/linux-yocto-tiny_4.12.bb
+./meta/recipes-kernel/linux/linux-dtb.inc
+./meta/recipes-kernel/linux/linux-yocto_4.12.bb
+./meta/recipes-kernel/linux/linux-dummy.bb
+./meta-skeleton/recipes-kernel/linux/linux-yocto-custom.bb
+
+6. build setup
+
+How to edit the machine name? Hint: Edit the following file
+
+srinivasan@srinivasan-UX305UA:~/yocto_session_ws/poky$ vim ./meta-poky/conf/local.conf.sample
+srinivasan@srinivasan-UX305UA:~/yocto_session_ws/poky$ 
+
+
+
+
+ Normally this is called as '. ./oe-init-build-env <builddir>'
+ it intern call: scripts/oe-buildenv-internal.sh
+
+7. bitbake utils
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ which bitbake-layers 
+/home/alex/Desktop/yocto_session/poky/bitbake/bin/bitbake-layers
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ ls -l ../poky/bitbake/bin
+total 92
+-rwxrwxr-x 1 alex alex  2099 Aug 24 18:19 bitbake
+-rwxrwxr-x 1 alex alex  7228 Aug 24 18:19 bitbake-diffsigs
+-rwxrwxr-x 1 alex alex  2894 Aug 24 18:19 bitbake-dumpsig
+-rwxrwxr-x 1 alex alex  4069 Aug 24 18:19 bitbake-layers
+-rwxrwxr-x 1 alex alex  2109 Aug 24 18:19 bitbake-prserv
+-rwxrwxr-x 1 alex alex  2278 Aug 24 18:19 bitbake-selftest
+-rwxrwxr-x 1 alex alex 17892 Aug 24 18:19 bitbake-worker
+-rwxrwxr-x 1 alex alex 13951 Aug 24 18:19 bitdoc
+-rwxrwxr-x 1 alex alex  5813 Aug 24 18:19 git-make-shallow
+-rwxrwxr-x 1 alex alex  9148 Aug 24 18:19 toaster
+-rwxrwxr-x 1 alex alex  4177 Aug 24 18:19 toaster-eventreplay
+
+
+8.show-layers
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers show-layers
+NOTE: Starting bitbake server...
+layer                 path                                      priority
+==========================================================================
+meta                  /home/alex/Desktop/yocto_session/poky/meta  5
+meta-poky             /home/alex/Desktop/yocto_session/poky/meta-poky  5
+meta-yocto-bsp        /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp  5
+
+
+9.show-appends
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers show-appends
+NOTE: Starting bitbake server...
+WARNING: Host distribution "ubuntu-14.04" has not been validated with this version of the build system; you may possibly experience unexpected failures. It is recommended that you use a tested distribution.
+Loading cache: 100% |############################################################################################################| Time: 0:00:00
+Loaded 1260 entries from dependency cache.
+
+Summary: There was 1 WARNING message shown.
+=== Appended recipes ===
+busybox_1.27.2.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-poky/recipes-core/busybox/busybox_%.bbappend
+formfactor_0.0.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp/recipes-bsp/formfactor/formfactor_0.0.bbappend
+linux-yocto_4.12.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.12.bbappend
+linux-yocto_4.14.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.14.bbappend
+linux-yocto_4.15.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.15.bbappend
+psplash_git.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-poky/recipes-core/psplash/psplash_git.bbappend
+xserver-xf86-config_0.1.bb:
+  /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp/recipes-graphics/xorg-xserver/xserver-xf86-config_0.1.bbappend
+linux-yocto-dev.bb (skipped):
+  /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp/recipes-kernel/linux/linux-yocto-dev.bbappend
+
+10.
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers show-recipes
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers show-recipes | grep "u-boot*"
+u-boot:
+u-boot-fw-utils:
+u-boot-mkimage:
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers show-recipes | grep "linux-*"
+binutils-crosssdk-x86_64-pokysdk-linux:
+cryptodev-linux:
+gcc-crosssdk-initial-x86_64-pokysdk-linux:
+gcc-crosssdk-x86_64-pokysdk-linux:
+linux-dummy:
+linux-firmware:
+linux-libc-headers:
+linux-yocto:
+linux-yocto-dev:
+linux-yocto-rt:
+linux-yocto-tiny:
+syslinux:
+util-linux:
+
+ 
+11. Add layer
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers create-layer -h
+NOTE: Starting bitbake server...
+usage: bitbake-layers create-layer [-h] [--priority PRIORITY]
+                                   [--example-recipe-name EXAMPLERECIPE]
+                                   [--example-recipe-version VERSION]
+                                   layerdir
+
+Create a basic layer
+
+positional arguments:
+  layerdir              Layer directory to create
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --priority PRIORITY, -p PRIORITY
+                        Layer directory to create
+  --example-recipe-name EXAMPLERECIPE, -e EXAMPLERECIPE
+                        Filename of the example recipe
+  --example-recipe-version VERSION, -v VERSION
+                        Version number for the example recipe
+
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers create-layer -p 5 -e example -v 0.1 alex
+NOTE: Starting bitbake server...
+Add your new layer with 'bitbake-layers add-layer alex'
+
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers add-layer alex
+NOTE: Starting bitbake server...
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers --help
+NOTE: Starting bitbake server...
+
+
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ bitbake-layers show-layers
+NOTE: Starting bitbake server...
+layer                 path                                      priority
+==========================================================================
+meta                  /home/alex/Desktop/yocto_session/poky/meta  5
+meta-poky             /home/alex/Desktop/yocto_session/poky/meta-poky  5
+meta-yocto-bsp        /home/alex/Desktop/yocto_session/poky/meta-yocto-bsp  5
+alex                  /home/alex/Desktop/yocto_session/build/alex  5
+alex@alex-inspiron-N4030:~/Desktop/yocto_session/build$ 
+
+
+12. bitbake command
+ bitbake --help
+Usage: bitbake [options] [recipename/target recipe:do_task ...]
+
+    Executes the specified task (default is 'build') for a given set of target recipes (.bb files).
+    It is assumed there is a conf/bblayers.conf available in cwd or in BBPATH which
+    will provide the layer, BBFILES and other configuration information.
+
+Options:
+
+  -s, --show-versions   Show current and preferred versions of all recipes.
+
+13.
+ In this example, a recipe called "something_1.2.3.bb" sets PN to "something" and PV to "1.2.3". 
+
+14.
+The default PROVIDES for a recipe is its name (PN),
+
+15.
+The recipe now provides both "foo_1.0" and "virtual/bar_1.0". The "virtual/" namespace is often used to denote cases where multiple providers are expected with the user choosing between them. Kernels and toolchain components are common cases of this in OpenEmbedded. 
+
+
+16.
+machine conf file:(beaglebone-yocto.conf)
+
+PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto"
+PREFERRED_VERSION_linux-yocto ?= "4.15%"
+
+./meta/recipes-kernel/linux/linux-yocto_4.14.bb
+./meta/recipes-kernel/linux/linux-yocto_4.15.bb
+
+./meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.14.bbappend
+./meta-yocto-bsp/recipes-kernel/linux/linux-yocto_4.15.bbappend
+
+bitbake  -s : show the following:
+
+linux-yocto                         :4.15.18+gitAUTOINC+d35642f0b6_e25dbfe953-r0
+
+17.
+
+ If the first recipe is named a_1.1.bb, then the PN variable will be set to “a”, and the PV variable will be set to 1.1.
+
+If we then have a recipe named a_1.2.bb, BitBake will choose 1.2 by default. However, if we define the following variable in a .conf file that BitBake parses, we can change that.
+
+     PREFERRED_VERSION_a = "1.1"
+
+
+            
+18. machine conf file:(beaglebone-yocto.conf)
+SERIAL_CONSOLES = "115200;ttyO0"
+
+PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto"
+PREFERRED_VERSION_linux-yocto ?= "4.15%"
+
+KERNEL_IMAGETYPE = "zImage"
+
+
+

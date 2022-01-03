@@ -1,0 +1,1000 @@
+  972  vim /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/temp/log.do_configure.32687
+  973  ls -l /home/srinivasan/yocto_session_ws/build/tmp/work-shared/qemux86/kernel-source/arch/x86/configs/i386_defconfig
+  974  bitbake linux-yocto-custom-session -c clean
+  975  bitbake linux-yocto-custom-session -v
+  976  bitbake linux-yocto-custom-session -c fetch
+  977  bitbake linux-yocto-custom-session -c clean
+  978  bitbake linux-yocto-custom-session -c fetch -v
+  979  find ./ -iname "linux-yocto-custom-session-4.14.39+gitAUTOINC+e53b04cdae-r0"
+  980  bitbake linux-yocto-custom-session -c cleanall
+  981  bitbake linux-yocto-custom-session -c fetch -v
+  982  bitbake linux-yocto-custom-session -c unpack -v
+  983  ls -l /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/
+  984  cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/
+  985  cd git/
+  986  ls
+  987  cd ..
+  988  cd build/
+  989  ls
+  990  cd ..
+  991  cd recipe-sysroot
+  992  ls
+  993  cd ..
+  994  cd  recipe-sysroot-native/
+  995  ls
+  996  cd installeddeps/
+  997  ls
+  998  cd ..
+  999  bitbake linux-yocto-custom-session -v
+ 1000  bitbake linux-yocto-custom-session -v -c clean
+ 1001  bitbake linux-yocto-custom-session -v
+ 1002  vim /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/temp/log.do_configure.2187
+ 1003  bitbake linux-yocto-custom-session -v -c clean
+ 1004  bitbake linux-yocto-custom-session -v
+ 1005  vim /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/temp/log.do_compile.2373
+ 1006  bitbake linux-yocto-custom-session -v -c clean
+ 1007  bitbake linux-yocto-custom-session -v
+ 1008  bitbake linux-yocto-custom-session -v -c clean
+ 1009  bitbake linux-yocto-custom-session -v
+ 1010  bitbake linux-yocto-custom-session -v -c clean
+ 1011  bitbake linux-yocto-custom-session -v
+ 1012  bitbake linux-yocto-custom-session -v -c clean
+ 1013  bitbake linux-yocto-custom-session -v
+ 1014  bitbake linux-yocto-custom-session -v -c clean
+ 1015  bitbake linux-yocto-custom-session -v
+ 1016  bitbake linux-yocto-custom-session -v -c clean
+ 1017  bitbake linux-yocto-custom-session -v
+ 1018  bitbake linux-yocto-custom-session -v -c clean
+ 1019  bitbake linux-yocto-custom-session -v
+ 1020  cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0/build
+ 1021  ls
+ 1022  cd -
+ 1023  bitbake linux-yocto-custom-session -v -c unpack
+ 1024  cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0/build
+ 1025  ls
+ 1026  cd ..
+ 1027  ls
+ 1028  cd ..
+ 1029  cd  4.14.39+gitrt29-r0
+ 1030  ls
+ 1031  cd ..
+ 1032  bitbake linux-yocto-custom-session -v -c compile
+ 1033  ls tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0/
+ 1034  bitbake linux-yocto-custom-session -v -c compile
+ 1035  bitbake linux-yocto-custom-session -v -c clean
+ 1036  bitbake linux-yocto-custom-session -v -c compile
+ 1037  vim /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0/temp/log.do_compile.5155
+ 1038  cd cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0
+ 1039  cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0
+ 1040  ls
+ 1041  cd -
+ 1042  bitbake linux-yocto-custom-session -v -c configure
+ 1043  bitbake linux-yocto-custom-session -v -c compile
+ 1044  ls
+ 1045  cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitrt29-r0
+ 1046  ls
+ 1047  make oldconfig
+ 1048  cp defconfig .config 
+ 1049  cd -
+ 1050  bitbake linux-yocto-custom-session -v -c compile
+ 1051  bitbake linux-yocto-custom-session -v -c clean
+ 1052  bitbake linux-yocto-custom-session -v -c configure
+ 1053  bitbake linux-yocto-custom-session -v -c compile
+ 1054  bitbake linux-yocto-custom-session -v -c clean
+ 1055  bitbake linux-yocto-custom-session -v -c configure
+ 1056  bitbake linux-yocto-custom-session -v -c compile
+ 1057  cd cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/build
+ 1058  cd /home/srinivasan/yocto_session_ws/build/tmp/work/qemux86-poky-linux/linux-yocto-custom-session/4.14.39+gitAUTOINC+e53b04cdae-r0/build
+ 1059  ls
+ 1060  cd ..
+ 1061  ls
+ 1062  cd git
+ 1063  ls
+ 1064  cd ..
+ 1065  cd build/
+ 1066  ls
+ 1067  cd ..
+ 1068  ls
+ 1069  cd ..
+ 1070  ls
+ 1071  cd linux-yocto-custom-session/
+ 1072  ls
+ 1073  cd 4.14.39+gitAUTOINC+e53b04cdae-r0/
+ 1074  ls
+ 1075  cd  git
+ 1076  ls
+ 1077  cd ..
+ 1078  ls
+ 1079  cd 
+ 1080  ls
+ 1081  cd linux_intel_rt/
+ 1082  ls
+ 1083  cd ..
+ 1084  cd fsl-release-bsp/
+ 1085  ls
+ 1086  cd  sources/
+ 1087  ls
+ 1088  cd ..
+ 1089  cd build-x11/
+ 1090  ls
+ 1091  cd tmp/
+ 1092  ls
+ 1093  cd work
+ 1094  ls
+ 1095  cd  imx6ull14x14evk-poky-linux-gnueabi/
+ 1096  ls
+ 1097  cd linux-imx/
+ 1098  ls
+ 1099  cd 4.9.11-r0/
+ 1100  ls
+ 1101  cd build/
+ 1102  ls
+ 1103  cd  arch/
+ 1104  ls
+ 1105  cd arm/
+ 1106  ls
+ 1107  cd con
+ 1108  cd ..
+ 1109  ls
+ 1110  cd  ..
+ 1111  ls
+ 1112  cd  imx6ull14x14evk-poky-linux-gnueabi/
+ 1113  ls
+ 1114  cd linux-imx/
+ 1115  ls
+ 1116  cd 4.9.11-r0/
+ 1117  ls
+ 1118  cd git
+ 1119  ls
+ 1120  cd  arch/
+ 1121  ls
+ 1122  cd x86/
+ 1123  ls
+ 1124  cd  configs/
+ 1125  ls
+ 1126  cd ../
+ 1127  cd ../arm/configs/
+ 1128  ls -l be
+ 1129  ls -l 
+ 1130  cd ..
+ 1131  ls
+ 1132  cd  cd sources/
+ 1133  ls
+ 1134  cd sources/
+ 1135  ls
+ 1136  cd meta-fsl-bsp-release/
+ 1137  ls
+ 1138  cd imx/
+ 1139  ls
+ 1140  cd meta-
+ 1141  cd meta-bsp/
+ 1142  ls
+ 1143  cd  recipes-kernel/
+ 1144  ls
+ 1145  cd linux
+ 1146  ls
+ 1147  vim linux-imx_4.9.11.bb
+ 1148  ls
+ 1149  cd ..
+ 1150  cd imx/
+ 1151  cd meta-bsp/
+ 1152  ls
+ 1153  cd recipes-kernel/
+ 1154  ls
+ 1155  cd linux
+ 1156  ls
+ 1157  vim linux-imx_4.9.11.bb
+ 1158  ls
+ 1159  cd ..
+ 1160  cd build-x11/
+ 1161  ls
+ 1162  cd  tmp/
+ 1163  ls
+ 1164  cd work
+ 1165  ls
+ 1166  cd  imx6ull14x14evk-poky-linux-gnueabi/
+ 1167  ls
+ 1168  d linux-imx/
+ 1169  cd linux-imx/
+ 1170  ls
+ 1171  cd 4.9.11-r0/
+ 1172  ls
+ 1173  cd 
+ 1174  cd -
+ 1175  cd git/
+ 1176  ls
+ 1177  cd arch/x86/
+ 1178  ls
+ 1179  cd configs/ls
+ 1180  cd configs/
+ 1181  ls
+ 1182  cd ..
+ 1183  ls
+ 1184  cd  sources/
+ 1185  ls
+ 1186  cd meta-fsl-bsp-release/
+ 1187  ls
+ 1188  cd imx/
+ 1189  sl
+ 1190  ks
+ 1191  ls
+ 1192  cd meta-bsp/
+ 1193  ls
+ 1194  cd recipes-
+ 1195  cd recipes-kernel/
+ 1196  ls
+ 1197  cd linux
+ 1198  ls
+ 1199  vim linux-imx_4.9.11.bb
+ 1200  cd ../
+ 1201  cd ../yocto_session_ws_2/build/tmp/work-shared/qemux86/kernel-source/
+ 1202  git log
+ 1203  git remote -v
+ 1204  cd ../../
+ 1205  cd ../
+ 1206  bitbake -e virtual/kernel >alex.evc
+ 1207  cd ../
+ 1208  cd poky/
+ 1209  source ./oe-init-build-env ../build/
+ 1210  bitbake -e virtual/kernel >alex.evc
+ 1211  vim alex.evc 
+ 1212  bitbake virtual/kernel  -v
+ 1213  bitbake virtual/kernel  -v -c clean
+ 1214  bitbake virtual/kernel  -v
+ 1215  vim alex.evc 
+ 1216  bitbake virtual/kernel  -v -c clean
+ 1217  bitbake virtual/kernel  -v
+ 1218  vim alex.evc 
+ 1219  bitbake virtual/kernel  -v -c clean
+ 1220  bitbake virtual/kernel  -v
+ 1221  bitbake virtual/kernel  -v -c clean
+ 1222  bitbake virtual/kernel  -v
+ 1223  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work-shared/qemux86/kernel-source
+ 1224  bitbake virtual/kernel  -v -c clean
+ 1225  bitbake virtual/kernel  -v
+ 1226  bitbake virtual/kernel  -v -c clean
+ 1227  bitbake virtual/kernel  -v
+ 1228  cd ../
+ 1229  cd poky/
+ 1230  source ./oe-init-build-env ../build/
+ 1231  bitbake virtual/kernel  -v -c clean
+ 1232  bitbake virtual/kernel  -v
+ 1233  vim alex.evc 
+ 1234  bitbake -e virtual/kernel >alex.evc
+ 1235  vim alex.evc 
+ 1236  bitbake -e virtual/kernel >alex.evc
+ 1237  bitbake virtual/kernel  -v
+ 1238  md5sum /home/srinivasan/yocto_session_ws_2/build/tmp/work/qemux86-poky-linux/linux-yocto-custom/4.14+gitAUTOINC+bebc6082da-r0/defconfig 
+ 1239  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-yocto-custom/4.14+gitAUTOINC+bebc6082da-r0/linux-yocto-custom-4.14+gitAUTOINC+bebc6082da/defconfig
+ 1240  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-yocto-custom/4.14+gitAUTOINC+bebc6082da-r0/linux-yocto-custom-4.14+gitAUTOINC+bebc6082da/
+ 1241  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-yocto-custom/4.14+gitAUTOINC+bebc6082da-r0/
+ 1242  bitbake -e virtual/kernel >alex.evc
+ 1243  vim alex.evc 
+ 1244  bitbake virtual/kernel  -c unpack
+ 1245  bitbake virtual/kernel  
+ 1246  ls -l /home/srinivasan/Downloads/linux-4.14/COPYING 
+ 1247  md5sum /home/srinivasan/Downloads/linux-4.14/COPYING 
+ 1248  bitbake virtual/kernel  
+ 1249  bitbake virtual/kernel  -c clean
+ 1250  bitbake virtual/kernel  
+ 1251  bitbake virtual/kernel  -c clean
+ 1252  bitbake virtual/kernel  
+ 1253  bitbake virtual/kernel  -c clean
+ 1254  bitbake virtual/kernel  
+ 1255  cd ../poky/
+ 1256  ls -l
+ 1257  git status
+ 1258  git checkout -- meta/classes/kernel-yocto.bbclass
+ 1259  git checkout -- meta/classes/kernel.bbclass
+ 1260  cp meta/recipes-kernel/linux/linux-dummy.bb meta/recipes-kernel/linux/linux-dummy_4.14.bb
+ 1261  vim meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1262  vim meta/conf/machine/qemux86.conf
+ 1263  bitbake virtual/kernel
+ 1264  vim meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1265  bitbake virtual/kernel
+ 1266  source ./oe-init-build-env ../build/
+ 1267  bitbake virtual/kernel
+ 1268  bitbake virtual/kernel -c clean
+ 1269  bitbake virtual/kernel -v
+ 1270  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1271  bitbake virtual/kernel -v
+ 1272  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1273  bitbake virtual/kernel -v
+ 1274  bitbake virtual/kernel -c clean
+ 1275  bitbake virtual/kernel -v
+ 1276  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1277  bitbake virtual/kernel -v
+ 1278  bitbake virtual/kernel -c cleanall
+ 1279  bitbake virtual/kernel -v
+ 1280  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1281  bitbake virtual/kernel -v
+ 1282  bitbake virtual/kernel -c unpack
+ 1283  bitbake virtual/kernel -c clean
+ 1284  bitbake virtual/kernel -v
+ 1285  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1286  bitbake virtual/kernel -c clean
+ 1287  bitbake virtual/kernel 
+ 1288  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1289  bitbake virtual/kernel -c clean
+ 1290  bitbake virtual/kernel 
+ 1291  bitbake -e virtual/kernel > alex.evc 
+ 1292  bitbake  virtual/kernel -c listtaks
+ 1293  bitbake  virtual/kernel -c listtasks
+ 1294  vim alex.evc 
+ 1295  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1296  bitbake  virtual/kernel -c listtasks
+ 1297  bitbake  virtual/kernel -c unpack -v
+ 1298  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1299  bitbake  virtual/kernel -c clean
+ 1300  bitbake  virtual/kernel -v
+ 1301  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1302  bitbake  virtual/kernel -c clean
+ 1303  bitbake  virtual/kernel -v
+ 1304  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1305  bitbake  virtual/kernel -v
+ 1306  bitbake  virtual/kernel -c clean
+ 1307  cd tmp/work/i586-poky-linux/linux-dummy/4.14-r1/
+ 1308  ls
+ 1309  cd git/
+ 1310  got log
+ 1311  git checkout master
+ 1312  ls -l
+ 1313  git checkout v4.14
+ 1314  cd -
+ 1315  cd ../../../../
+ 1316  cd ../
+ 1317  bitbake  virtual/kernel 
+ 1318  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1319  bitbake  virtual/kernel 
+ 1320  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1321  bitbake  virtual/kernel 
+ 1322  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1323  bitbake  virtual/kernel 
+ 1324  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1325  bitbake  virtual/kernel 
+ 1326  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1327  bitbake  virtual/kernel 
+ 1328  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1329  bitbake  virtual/kernel 
+ 1330  bitbake  virtual/kernel -c clean
+ 1331  bitbake  virtual/kernel -v
+ 1332  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1333  bitbake  virtual/kernel -v
+ 1334  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1335  bitbake  virtual/kernel -v
+ 1336  vim ../poky/meta/recipes-kernel/linux/linux-dummy_4.14.bb 
+ 1337  bitbake  virtual/kernel -v
+ 1338  bitbake  virtual/kernel -c clean
+ 1339  bitbake  virtual/kernel -v
+ 1340  bitbake  virtual/kernel -c cleanall
+ 1341  bitbake  virtual/kernel -v
+ 1342  bitbake  virtual/kernel -c cleanall
+ 1343  bitbake  virtual/kernel -v
+ 1344  bitbake  virtual/kernel -c configure
+ 1345  bitbake  virtual/kernel -c compile
+ 1346  cd tmp/work/i586-poky-linux/linux-dummy/4.14-r1/
+ 1347  ls
+ 1348  cd git/
+ 1349  ls
+ 1350  cp arch/x86/configs/x86_64_defconfig .config
+ 1351  cp arch/x86/configs/x86_64_defconfig defconfig
+ 1352  make CC=gcc -O=../build
+ 1353  make ARCH=x86 CC=gcc -O=../build
+ 1354  vim Makefile 
+ 1355  make ARCH=x86 CC=gcc O=../build
+ 1356  ls -l .config 
+ 1357  make ARCH=x86 CC=gcc O=../build
+ 1358  make ARCH=x86 CC=gcc O=../build oldconfig
+ 1359  make ARCH=x86 CC=gcc O=../build 
+ 1360  ls -l  .config 
+ 1361  vim .config 
+ 1362  make ARCH=x86 CC=gcc O=../build 
+ 1363  make ARCH=x86 CC=gcc O=../build defconfig
+ 1364  make ARCH=x86 CC=gcc O=../build 
+ 1365  vim Makefile 
+ 1366  make ARCH=x86 CC=gcc O=../build  mrproper
+ 1367  make ARCH=x86 CC=gcc O=../build defconfig
+ 1368  make ARCH=x86 CC=gcc O=../build  zImage
+ 1369  make ARCH=x86 CC=gcc O=../build 
+ 1370  ls -l
+ 1371  make ARCH=x86 CC=gcc O=../build 
+ 1372  make ARCH=x86  O=../build 
+ 1373  make ARCH=x86  O=../build clean
+ 1374  make ARCH=x86  O=../build defconfig
+ 1375  make ARCH=x86  O=../build all
+ 1376  make ARCH=x86  O=../build mrproper
+ 1377  make ARCH=x86  O=../build all
+ 1378  make ARCH=x86  O=../build defconfig
+ 1379  make ARCH=x86 all
+ 1380  make ARCH=x86 CC=gcc 
+ 1381  make ARCH=x86 CC=gcc  defconfig
+ 1382  make ARCH=x86 CC=gcc 
+ 1383  vim alex.evc 
+ 1384  bitbake -e virtual/kernel > alex.evc 
+ 1385  cd ../
+ 1386  cd poky/
+ 1387  source ./oe-init-build-env ../build/
+ 1388  bitbake -e virtual/kernel > alex.evc 
+ 1389  cd ../poky/
+ 1390  cd meta/classes/
+ 1391  grep -rin "do_unpack" ./
+ 1392  vim base.bbclass 
+ 1393  cd 
+ 1394  sudo apt-get install pip
+ 1395  pip install requests
+ 1396  which python
+ 1397  sudo pip install requests
+ 1398  sudo easy_install -U requests
+ 1399  sudo apt-get install python-request
+ 1400  python
+ 1401  ls
+ 1402  cd  yocto_session_ws
+ 1403  cd ..
+ 1404  cd yocto_session_ws_@
+ 1405  cd yocto_session_ws_2/
+ 1406  ls
+ 1407  ls -l
+ 1408  cd build/
+ 1409  ls
+ 1410  cd tmp/work
+ 1411  ls
+ 1412  cd i586-poky-linux/
+ 1413  ls -l
+ 1414  ls -l linux-
+ 1415  ls -l linux-*
+ 1416  cd ..
+ 1417  ls
+ 1418  cd  qemux86-poky-linux/
+ 1419  ls
+ 1420  cd linux-yocto-custom/
+ 1421  ls
+ 1422  cd ..
+ 1423  ls
+ 1424  cd tmp/work/i586-poky-linux/linux-dummy/
+ 1425  ls
+ 1426  cd 4.14-r1/
+ 1427  ls
+ 1428  cd git/
+ 1429  ls
+ 1430  ls -l
+ 1431  ls -l arch/x86/configs/
+ 1432  cd /home/srinivasan/yocto_session_ws_2/poky/meta/recipes-kernel/linux/files
+ 1433  md5sum COPYING.GPL 
+ 1434  ls
+ 1435  rm -rf compilation_commands~
+ 1436  ls
+ 1437  cd yocto_session_ws
+ 1438  ls
+ 1439  cd poky/
+ 1440  ls
+ 1441  cd meta
+ 1442  ls
+ 1443  cd recipes-kernel/
+ 1444  ls
+ 1445  cd  linux
+ 1446  ls
+ 1447  vim linux-yocto-custom-session.bb 
+ 1448  cd ..
+ 1449  cd -
+ 1450  ls
+ 1451  cd files/
+ 1452  ls
+ 1453  grep -rin "linux-rt-devel-linux-4.14.y-rt.tar.gz" 
+ 1454  cd ..
+ 1455  grep -rin "linux-rt-devel-linux-4.14.y-rt.tar.gz" 
+ 1456  vim linux-yocto-custom-session.bb +62
+ 1457  cd ..
+ 1458  cd yocto_session_ws_2/
+ 1459  ls
+ 1460  cd yocto_session/
+ 1461  ls
+ 1462  cd ..
+ 1463  ls
+ 1464  cd poky/
+ 1465  cd meta
+ 1466  ls
+ 1467  cd  recipes-core/
+ 1468  ls
+ 1469  cd  zlib/
+ 1470  ls
+ 1471  vim zlib_1.2.11.bb 
+ 1472  cd ..
+ 1473  cd recipes-kernel/
+ 1474  ls
+ 1475  cd linux
+ 1476  ls
+ 1477  vim linux-dummy.bb 
+ 1478  cp linux-dummy.bb linux-srini_4.14.bb
+ 1479  vim linux-srini_4.14.bb 
+ 1480  cd ..
+ 1481  cd .
+ 1482  cd ..
+ 1483  vim meta/conf/machine/qemux86.conf
+ 1484  source ./oe-init-build-env ../build/
+ 1485  bitbake -e virtual/kernel > srini.env
+ 1486  bitbake virtual/kernel -v
+ 1487  bitbake virtual/kernel -v -c clean
+ 1488  bitbake virtual/kernel -v
+ 1489  bitbake virtual/kernel -v -c clean
+ 1490  bitbake virtual/kernel -v
+ 1491  cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git
+ 1492  ls -l
+ 1493  cd -
+ 1494  cd ..
+ 1495  ls
+ 1496  cd -
+ 1497  cd ..
+ 1498  bitbake virtual/kernel -v
+ 1499  bitbake virtual/kernel -v -c clean
+ 1500  bitbake virtual/kernel -v
+ 1501  bitbake virtual/kernel -v -c clean
+ 1502  bitbake virtual/kernel -v
+ 1503  cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git/COPYING.GPL
+ 1504  ls
+ 1505  cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git/
+ 1506  ls
+ 1507  md5sum COPYING 
+ 1508  cd -
+ 1509  bitbake virtual/kernel -v -c clean
+ 1510  bitbake virtual/kernel -v 
+ 1511  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git/COPYING
+ 1512  bitbake virtual/kernel -v 
+ 1513  bitbake virtual/kernel -v -c clean
+ 1514  bitbake virtual/kernel -v 
+ 1515  vim /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/temp/log.do_populate_lic.6312
+ 1516  bitbake virtual/kernel -v -c clean
+ 1517  bitbake virtual/kernel -v
+ 1518  vim /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/temp/log.do_kernel_checkout.6451
+ 1519  cd cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git
+ 1520  cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git
+ 1521  ls
+ 1522  ls -la
+ 1523  cd -
+ 1524  bitbake virtual/kernel -v
+ 1525  bitbake virtual/kernel -v -c clean
+ 1526  bitbake virtual/kernel -v
+ 1527  bitbake virtual/kernel -v -c configure
+ 1528  bitbake virtual/kernel -v -c compile
+ 1529  bitbake virtual/kernel -v -c clean
+ 1530  bitbake virtual/kernel -v
+ 1531  bitbake virtual/kernel -v -c clean
+ 1532  bitbake virtual/kernel -v
+ 1533  bitbake virtual/kernel -v -c clean
+ 1534  bitbake virtual/kernel -v
+ 1535  bitbake virtual/kernel -v -c clean
+ 1536  bitbake virtual/kernel -v
+ 1537  bitbake virtual/kernel -v -c clean
+ 1538  bitbake virtual/kernel -v
+ 1539  bitbake virtual/kernel -v -c clean
+ 1540  bitbake virtual/kernel -v
+ 1541  bitbake virtual/kernel -v -c clean
+ 1542  bitbake virtual/kernel -v
+ 1543  bitbake virtual/kernel -v -c clean
+ 1544  bitbake virtual/kernel -v
+ 1545  bitbake virtual/kernel -v -c clean
+ 1546  bitbake virtual/kernel -v
+ 1547  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git/arch/x86/configs/x86_64_defconfig
+ 1548  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git/arch/x86/configs/
+ 1549  ls -l /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git
+ 1550  ls
+ 1551  cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/git
+ 1552  ls -l
+ 1553  ls -la
+ 1554  cd -
+ 1555  bitbake virtual/kernel -v -c fetch
+ 1556  bitbake virtual/kernel -v -c unpack
+ 1557  bitbake virtual/kernel -v -c kenel_checkout
+ 1558  bitbake virtual/kernel -v -c kernel_checkout
+ 1559  bitbake virtual/kernel -v -c clean
+ 1560  bitbake virtual/kernel -v 
+ 1561  bitbake virtual/kernel -v -c clean
+ 1562  bitbake virtual/kernel -v 
+ 1563  bitbake virtual/kernel -v -c clean
+ 1564  bitbake virtual/kernel -v 
+ 1565  bitbake virtual/kernel -v -c clean
+ 1566  bitbake virtual/kernel -v 
+ 1567  bitbake virtual/kernel -v -c clean
+ 1568  bitbake virtual/kernel -v 
+ 1569  bitbake virtual/kernel -v -c clean
+ 1570  bitbake virtual/kernel -v 
+ 1571  bitbake virtual/kernel -v -c clean
+ 1572  bitbake virtual/kernel -v 
+ 1573  bitbake virtual/kernel -v -c clean
+ 1574  bitbake virtual/kernel -v 
+ 1575  bitbake virtual/kernel -v -c clean
+ 1576  bitbake virtual/kernel -v 
+ 1577  bitbake virtual/kernel -v -c clean
+ 1578  bitbake virtual/kernel -v 
+ 1579  bitbake virtual/kernel -v -c clean
+ 1580  bitbake virtual/kernel -v 
+ 1581  bitbake virtual/kernel -v -c clean
+ 1582  bitbake virtual/kernel -v 
+ 1583  bitbake virtual/kernel -v -c clean
+ 1584  bitbake virtual/kernel -v 
+ 1585  bitbake virtual/kernel -v -c clean
+ 1586  bitbake virtual/kernel -v 
+ 1587  bitbake virtual/kernel -v -c clean
+ 1588  bitbake virtual/kernel -v 
+ 1589  bitbake virtual/kernel -v -c clean
+ 1590  bitbake virtual/kernel -v 
+ 1591  bitbake virtual/kernel -v -c clean
+ 1592  bitbake virtual/kernel -v 
+ 1593  bitbake virtual/kernel -v -c clean
+ 1594  bitbake virtual/kernel -v 
+ 1595  bitbake virtual/kernel -v -c clean
+ 1596  bitbake virtual/kernel -v
+ 1597  vim /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/temp/log.do_compile.14581
+ 1598  cd /home/srinivasan/yocto_session/script/build/dl/zlib
+ 1599  ls
+ 1600  git branch
+ 1601  git branch -av
+ 1602  git log
+ 1603  git branch -av
+ 1604  git checkout -b srini
+ 1605  git branch -av
+ 1606  git checkout -d srini
+ 1607  git checkout  master
+ 1608  git branch -d srini
+ 1609  git branch -av
+ 1610  git branch -d master
+ 1611  git checkout develop
+ 1612  git branch -av
+ 1613  git branch -d master
+ 1614  git branch -av
+ 1615  git checkout master
+ 1616  git branch -av
+ 1617  git checkout srini
+ 1618  git branch srini
+ 1619  git checkout srini
+ 1620  git branch -av
+ 1621  gitk
+ 1622  sudo apt-get install gitk
+ 1623  gitk 
+ 1624  ls
+ 1625  vim srini.txt
+ 1626  git add .
+ 1627  git log
+ 1628  git status
+ 1629  git commit -m -a "new file added for testing"
+ 1630  git log
+ 1631  git commit -m -a "new file added for testing"
+ 1632  git commit -a -m "new file added for testing"
+ 1633  git log
+ 1634  ls
+ 1635  git merge srini
+ 1636  git branch -av
+ 1637  git branch master
+ 1638  git checkout master
+ 1639  git branch -av
+ 1640  git merge srini
+ 1641  git branch -av
+ 1642  git log
+ 1643  git reset -HEAD
+ 1644  git reset --HEAD
+ 1645  git reset --hard
+ 1646  cd
+ 1647  cd /home/srinivasan/yocto_session/script/build/dl/zlib
+ 1648  ls
+ 1649  md5sum INDEX 
+ 1650  cd
+ 1651  cd -
+ 1652  cd ..
+ 1653  ls
+ 1654  ./sample_zlib.sh
+ 1655  history
+ 1656  history > ~/yocto_session/history_latest
+ 1657  history
+ 1658  history > ~/yocto_session/history.txt
+ 1659  cd
+ 1660  cd yocto_
+ 1661  cd yocto_session
+ 1662  ls
+ 1663  cd script/
+ 1664  ls
+ 1665  chmod 777 sample_bbexample.sh 
+ 1666  ./sample_bbexample.sh 
+ 1667  ./sample_zlib.sh 
+ 1668  ./sample_bbexample.sh 
+ 1669  chmod 777 sample_kernel.sh 
+ 1670  ./sample_kernel.sh 
+ 1671  sudo apt-get install bison
+ 1672  ./sample_kernel.sh 
+ 1673  cd 
+ 1674  cd yocto_session_ws_2/
+ 1675  ls
+ 1676  cd yocto_session/
+ 1677  ls
+ 1678  cd ..
+ 1679  cd poky/
+ 1680  ls
+ 1681  cd meta
+ 1682  ls
+ 1683  classes/
+ 1684  ls
+ 1685  cd classes/
+ 1686  ls
+ 1687  ls base.bbclass 
+ 1688  vim base.bbclass 
+ 1689  cd /home/srinivasan/yocto_session/script
+ 1690  ls
+ 1691  chmod 777 sample_zlib.sh
+ 1692  ./sample_zlib.sh 
+ 1693  ls
+ 1694  cd build/
+ 1695  ls
+ 1696  cd tmp/
+ 1697  ls
+ 1698  cd deploy/
+ 1699  ls
+ 1700  cd lib/
+ 1701  ls
+ 1702  ls -l
+ 1703  cd 
+ 1704  cd make_example/
+ 1705  mkdir add
+ 1706  ls
+ 1707  make clean
+ 1708  ls
+ 1709  mkdir add
+ 1710  rm -rf add
+ 1711  mkdir add
+ 1712  mkdir sub
+ 1713  rm -rf sub
+ 1714  mkdir sub
+ 1715  ls
+ 1716  make
+ 1717  make all
+ 1718  ls -l build/
+ 1719  make clean
+ 1720  make all
+ 1721  ls
+ 1722  vim Makefile
+ 1723  make all
+ 1724  ls -l build/
+ 1725  vim Makefile
+ 1726  make clean
+ 1727  make all
+ 1728  make clean
+ 1729  make
+ 1730  ls -l build/
+ 1731  ls -l build/helloworld
+ 1732  ./build/helloworld
+ 1733  mkdir make_example
+ 1734  cd make_example
+ 1735  vim helloworld.c
+ 1736  gcc helloworld.c -o helloworld
+ 1737  ./helloworld 
+ 1738  vim Makefile
+ 1739  ls
+ 1740  rm -rf helloworld
+ 1741  make
+ 1742  ls
+ 1743  vim Makefile 
+ 1744  ./helloworld 
+ 1745  vim Makefile 
+ 1746  make
+ 1747  ls
+ 1748  make clean
+ 1749  ls
+ 1750  make all
+ 1751  ls
+ 1752  make clean
+ 1753  ls
+ 1754  make clean
+ 1755  ls
+ 1756  vim Makefile 
+ 1757  make clean
+ 1758  make all
+ 1759  ls
+ 1760  vim Makefile 
+ 1761  make clean
+ 1762  make all
+ 1763  vim Makefile 
+ 1764  make clean
+ 1765  ls
+ 1766  make
+ 1767  vim helloworld.c
+ 1768  ls
+ 1769  ./helloworld 
+ 1770  vim helloworld.c
+ 1771  make all
+ 1772  vim Makefile 
+ 1773  make clean
+ 1774  make all
+ 1775  vim Makefile 
+ 1776  make all
+ 1777  vim helloworld.c
+ 1778  vim Makefile 
+ 1779  make all
+ 1780  vim Makefile 
+ 1781  make all
+ 1782  make clean
+ 1783  make all
+ 1784  ./helloworld 
+ 1785  vim Makefile 
+ 1786  make all
+ 1787  ls
+ 1788  cd ..
+ 1789  ls
+ 1790  make -c ./make_example/
+ 1791  make -C ./make_example/
+ 1792  make clean -C ./make_example/
+ 1793  make all -C ./make_example/
+ 1794  cd make_example/
+ 1795  ls
+ 1796  cd ..
+ 1797  make clean -C ./make_example/
+ 1798  ls ./make_example/
+ 1799  ls
+ 1800  cd make_example/
+ 1801  vim helloworld.c
+ 1802  make
+ 1803  make clean
+ 1804  make all
+ 1805  make clean
+ 1806  make all
+ 1807  make clean
+ 1808  make all
+ 1809  ls
+ 1810  cd 
+ 1811  ls
+ 1812  cd  fsl-release-bsp/
+ 1813  ls
+ 1814  cd build-x11/
+ 1815  ls
+ 1816  cd tmp/
+ 1817  ls
+ 1818  cd work
+ 1819  ls
+ 1820  cd imx6ull14x14evk-poky-linux-gnueabi/
+ 1821  ls
+ 1822  cd u-boot-imx/
+ 1823  ls
+ 1824  cd 2017.03-r0/
+ 1825  ls
+ 1826  cd git/
+ 1827  ls
+ 1828  find ./ -iname "include"
+ 1829  find ./ -iname "Makefile"
+ 1830  vim ./drivers/rtc/Makefile
+ 1831  vim Makefile 
+ 1832  ls
+ 1833  cd yocto_session_ws_2/
+ 1834  ls
+ 1835  cd poky/
+ 1836  source ./oe-init-build-env ../build/
+ 1837  bitbake virtual/kernel -v
+ 1838  vim /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/temp/log.do_compile.3909
+ 1839  cd ..
+ 1840  ls
+ 1841  cd poky/
+ 1842  ls
+ 1843  cd  meta
+ 1844  ls
+ 1845  cd recipes-kernel/
+ 1846  ls
+ 1847  cd linuxls
+ 1848  cd linux
+ 1849  ls
+ 1850  vim linux-srini_4.14.bb
+ 1851  cd ..
+ 1852  cd conf/
+ 1853  ls
+ 1854  cd machine
+ 1855  ls
+ 1856  vim qemux86.conf
+ 1857  cd ..
+ 1858  cd poky/
+ 1859  source ./oe-init-build-env ../build/
+ 1860  bitbake virtual/kernel -v -c clean
+ 1861  bitbake virtual/kernel -v 
+ 1862  cp /home/srinivasan/yocto_session_ws_2/poky/meta/recipes-kernel/linux/linux-srini_4.14.bb /home/srinivasan/yocto_session/Queries_to_be_posted/
+ 1863  cp /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/temp/log.do_compile.4343 /home/srinivasan/yocto_session/Queries_to_be_posted/
+ 1864  bitbake -e virtual/kernel | grep "^PN"
+ 1865  vim  poky/meta-yocto/conf/distro/poky.conf
+ 1866  cd ../poky/
+ 1867  find ./ -iname "poky.conf"
+ 1868  vim ./meta-poky/conf/distro/poky.conf
+ 1869  bitbake -e virtual/kernel | grep "^PN"
+ 1870  cd cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/build
+ 1871  cd /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/build
+ 1872  ls
+ 1873  cd ..
+ 1874  ls
+ 1875  cd 
+ 1876  cd -
+ 1877  cd ..
+ 1878  ls
+ 1879  cd ..
+ 1880  cd poky/
+ 1881  source ./oe-init-build-env ../build/
+ 1882  bitbake virtual/kernel -v -c clean
+ 1883  bitbake virtual/kernel -v
+ 1884  bitbake virtual/kernel -v -c clean
+ 1885  bitbake virtual/kernel -v 
+ 1886  bitbake virtual/kernel -v -c clean
+ 1887  bitbake virtual/kernel -v 
+ 1888  bitbake virtual/kernel -v -c clean
+ 1889  bitbake virtual/kernel -v 
+ 1890  ls /home/srinivasan/yocto_session_ws_2/build/tmp/work/i586-poky-linux/linux-srini/4.14-r1/deploy-rpms/i586/kernel-vmlinux-4.14-r1.i586.rpm
+ 1891  ls
+ 1892  bitbake virtual/kernel -v -c clean
+ 1893  bitbake virtual/kernel -v 
+ 1894  bitbake virtual/kernel -v -c clean
+ 1895  bitbake virtual/kernel -v 
+ 1896  bitbake virtual/kernel -v -c clean
+ 1897  bitbake virtual/kernel -v 
+ 1898  bitbake virtual/kernel -v -c clean
+ 1899  bitbake virtual/kernel -v 
+ 1900  vim ../poky/meta/recipes-kernel/linux/linux-srini_4.14.bb
+ 1901  ls
+ 1902  cd  yocto_session_ws_2/
+ 1903  cd poky/
+ 1904  source ./oe-init-build-env ../build/
+ 1905  bitbake virtual/kernel -v
+ 1906  bitbake virtual/kernel -v -c clean
+ 1907  bitbake virtual/kernel -v
+ 1908  bitbake virtual/kernel -v -c clean
+ 1909  bitbake virtual/kernel -v
+ 1910  bitbake virtual/kernel -v -c clean
+ 1911  bitbake virtual/kernel -v 
+ 1912  bitbake virtual/kernel -v -c clean
+ 1913  bitbake virtual/kernel -v 
+ 1914  bitbake virtual/kernel -v -c clean
+ 1915  bitbake virtual/kernel -v 
+ 1916  bitbake virtual/kernel -v -c clean
+ 1917  bitbake virtual/kernel -v 
+ 1918  sudo apt-get install libelf-dev
+ 1919  sudo apt-get install libelf-devel
+ 1920  sudo apt-get install elfutils-libelf-devel
+ 1921  bitbake virtual/kernel -v -c clean
+ 1922  bitbake virtual/kernel -v 
+ 1923  bitbake virtual/kernel -v -c clean
+ 1924  bitbake virtual/kernel -v 
+ 1925  gedit
+ 1926  ls
+ 1927  cd yocto_session_ws_2
+ 1928  ls
+ 1929  cd build/
+ 1930  ls
+ 1931  cd tmp/
+ 1932  ls
+ 1933  cd  work
+ 1934  ls
+ 1935  cd  i586-poky-linux/
+ 1936  ls
+ 1937  cd linux-srini/
+ 1938  ls
+ 1939  cd 4.14-r1/
+ 1940  ls
+ 1941  cd ..
+ 1942  history
+ 1943  ls
+ 1944  cd 4.14.39+gitAUTOINC+e53b04cdae-r1/
+ 1945  ls
+ 1946  cd git/
+ 1947  ls
+ 1948  git log
+ 1949  git branch -av
+ 1950  git log
+ 1951  cd 
+ 1952  cd yocto_session_ws_2/
+ 1953  ls
+ 1954  cd poky/
+ 1955  source ./oe-init-build-env ../build/
+ 1956  bitbake nano
+ 1957  gedit
+ 1958  sudo apt-get install gparted
+ 1959  fdisk -l
+ 1960  sudo fdisk -l
+ 1961  mount
+ 1962  sudo umount /dev/sdb1
+ 1963  mkfs -t vfat /dev/sdb1
+ 1964  dd if=/dev/zero of=/dev/sdb bs=1024
+ 1965  sudo dd if=/dev/zero of=/dev/sdb bs=1024
+ 1966  fdisk -l
+ 1967  sudo fdisk -l
+ 1968  sudo fdisk /dev/sdb
+ 1969  sudo mkfs -t vfat /dev/sdb1
+ 1970  history
+ 1971  history > latest_berlin

@@ -1,0 +1,147 @@
+
+1. write recipe
+
+The main points to note are that
+
+    1)SRC_URI is set to point to the git repository
+    2)SRC_REV corresponds to a particular commit into that repository (it is also possible to specify a branch) --> commit ID
+    3)There is a LICENSE variable defined to indicate the type of license to the build environment (MIT) and another variable,
+    4)LIC_FILES_CHKSUM, points to a file within the source tree that will be retrieved, with a corresponding md5 check-sum to ensure that 	somebody has actually verified the source license file corresponds to that given to the build environment. Also that this file, and thus 	     potentially the license, has not changed over time.
+    5)The source directory for the recipe build, ${S} is set to "${WORKDIR}/git" which is the default location to which the retrieved git 	repository will be checked out and unpacked.
+    6)We inherit a class called autotools which provides the functionality to enable bitbake to automatically build projects with autotools support.
+    7)There is a marked absence of a do_install function, which you may have seen elsewhere, as this is dealt with by the autotools support 
+
+
+Example:
+
+#
+# This file was derived from the 'Hello World!' example recipe in the
+# Yocto Project Development Manual.
+#
+
+DESCRIPTION = "Simple helloworld application"
+SECTION = "examples"
+DEPENDS = ""
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=96af5705d6f64a88e035781ef00e98a8"
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
+
+SRCREV = "4ec84957442182f36351f94c0626560ec3ffd487"
+SRC_URI = "git://github.com/DynamicDevices/bbexample.git"
+
+S = "${WORKDIR}/git"
+
+inherit autotools
+
+# The autotools configuration I am basing this on seems to have a problem with a race condition when parallel make is enabled
+PARALLEL_MAKE = ""
+
+2. Image Append
+
+	1)Append the Package
+	Within the build/conf/local.conf file, add this line anywhere:
+        IMAGE_INSTALL_append = " cyassl benchmark ctaocrypttest"
+
+	We included all three recipe packages from meta-wolfssl here. You can add multiple recipes from different layers (as long as these 		layers have a path located in step one) here or just one, or none.
+
+	2)Add Package to Image Recipe
+	If you installed Poky from the Yocto Project, the recipe for your image will be 
+	located at meta/recipes-<name>/images/<name-of-recipe>.bb. You can create your own custom image recipe, or add to an existing one. 	Since we used core-image-sato, we edited core-image-sato.bb in this location. If you do this, make sure you know exactly which changes 	you made so you can revert back to the original image if needed. To add a new recipe to your image, add this line (or add to the 		IMAGE_INSTALL line if it already exists):
+	IMAGE_INSTALL += "package-name package2-name package3-name"
+
+
+3. Share and reuse configurations
+
+	So far we used classes and config files to encapsulate configuration and tasks.
+	But there are more ways to reuse and extend tasks and configurations.
+	These are:
+
+    	class inheritance
+
+    	bbappend files
+
+    	include files
+
+	To demonstrate these usages we are going to add an additional class to layer-two.
+	The new class will introduce a configure-build chain and will reuse the existing mybuild class by using class inheritance.
+	Then we will use this new class within a new recipe.
+	After that we will extend an existing recipe by using the append technique.
+
+4.
+      Class inheritance
+
+	To realize our configure/build chain we create a class that inherits the mybuild class and simply adds a configure task as a 		dependency of the build task.
+
+	We create this as another class, which we will then use to demonstrate a class and a recipe which make use of inheritance.
+	meta-two/classes/confbuild.bbclass
+
+	inherit mybuild                            (1)
+
+	confbuild_do_configure () {                (2)
+
+	  echo "running configbuild_do_configure."
+
+	}
+
+	addtask do_configure before do_build       (3)
+
+	EXPORT_FUNCTIONS do_configure              (4)
+
+
+
+	    use the mybuild class as a base
+
+	    create the new function
+
+	    define the order of the functions, configure before build
+
+	    export the function so that it becomes available
+
+	We can now simply use this in our third recipe and use confbuild.
+	meta-two/recipes-base/third_01.bb
+
+	DESCRIPTION = "I am the third recipe"
+	PR = "r1"
+	inherit confbuild
+
+
+5.
+
+	BitBake has two directives to include files.
+
+	    include filename this is an optional include, if filename is not found no error is raised.
+
+	    require filename if filename is not found an error is raised.
+
+	It is worth mentioning that the include and require file name is relative to any directory in BBPATH.
+
+	Example: Add a local.conf for inclusion
+
+	A common use case in BitBake projects is that the bitbake.conf includes a local.conf file which is usually placed in the build 		directory.
+	The local.conf file may contains special setups for the current build target.
+	This is the typical Yocto setup.
+
+	We mimic the typical usage of a local.conf and make bitbake.conf require a local.conf by adding the following lines to our 		meta-tutorial/conf/bitbake.conf.
+	meta-tria/conf/bitbake.conf
+
+	require local.conf
+	include conf/might_exist.conf
+
+	If we run now some build BitBake will show a long error message where the last line will be something like:
+
+	ERROR: Unable to parse conf/bitbake.conf: …​Could not include required file local.conf
+
+	Adding a local.conf into the build directory, which can even be empty, will fix this.
+	The file given to the include statement is not required to exist.
+
+6. https://github.com/FrankBau/hello-cross-compilation/wiki/Writing-a-bitbake-Recipe
+
+7. http://www.multitech.net/developer/software/corecdp/development/writing-bitbake-recipes/
+
+8. http://variwiki.com/index.php?title=Yocto_Hello_World
+
+
+
+
+
